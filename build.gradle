@@ -1,0 +1,31 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+version = '1.0'
+springVersion = "3.0.2.RELEASE"
+sourceCompatibility = "1.6"
+slf4jVersion="1.6.1"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //slf4j
+    compile "org.slf4j:jcl-over-slf4j:$slf4jVersion","org.slf4j:jul-to-slf4j:$slf4jVersion"
+    //SpringMVC
+    compile "org.springframework:spring-webmvc:$springVersion"
+    //Java Servlet
+    compile "javax.servlet:servlet-api:2.5"
+    compile "javax.faces:jsf-api:1.2_02"
+    compile "javax.faces:jsf-impl:1.2-b19"
+    compile "javax.servlet:jstl:1.1.2", "taglibs:standard:1.1.2"
+    //Java Collection
+    compile "commons-collections:commons-collections:3.0"
+    //self4j (wheb run)
+    runtime "org.slf4j:slf4j-log4j12:$slf4jVersion"
+    //Junit4
+    testCompile "junit:junit:4.+"
+    //Junit Spring Suite
+    testCompile "org.springframework:spring-test:$springVersion"
+}

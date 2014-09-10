@@ -1,0 +1,23 @@
+## java file
+*.class
+*.jar
+*.war
+*.ear
+*.db
+## generic file
+*~
+.DS_Store
+*.swp
+*.bak
+*.out
+*.lock
+
+## project directory
+/bin/
+/build/
+/.gradle
+/.settings
+/out
+
+## IntelliJ files
+/.idea
